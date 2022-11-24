@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use("/", require("./router/router.js"));
 app.use("/messages", require("./router/messagesrouter.js"));
-const server = app.listen(8000, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log("app is listening at 8000");
 });
 
